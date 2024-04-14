@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  web:
+    build: .
+    command: uvicorn main:app --host 0.0.0.0 --port 80
+    container_name: backend
+    volumes:
+      - .:/app
+    ports:
+      - 80:80
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    container_name: postgres
+    ports:
+      - "3389:3389"
+    command: -p 3389

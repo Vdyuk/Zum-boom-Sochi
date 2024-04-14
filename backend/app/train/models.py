@@ -1,0 +1,51 @@
+from sqlalchemy import Column, Integer, VARCHAR, Float
+from sqlalchemy.orm import DeclarativeBase
+
+
+class Base(DeclarativeBase):
+    pass
+
+class TrainModel(Base):
+    __tablename__= "train"
+    slctn_nmbr = Column(Integer, primary_key=True)
+    client_id = Column(VARCHAR)
+    npo_account_id = Column(VARCHAR)
+    npo_accnts_nmbr = Column(Integer)
+    pmnts_type = Column(Integer)
+    year = Column(Integer)
+    quarter = Column(VARCHAR)
+    gender = Column(Integer)
+    age = Column(Integer)
+    clnt_cprtn_time_d = Column(Integer)
+    actv_prd_d = Column(Integer)
+    lst_pmnt_rcnc_d = Column(Integer)
+    balance = Column(Float)
+    oprtn_sum_per_qrtr = Column(Float)
+    oprtn_sum_per_year = Column(Float)
+    frst_pmnt_date = Column(VARCHAR)
+    lst_pmnt_date_per_qrtr = Column(VARCHAR)
+    frst_pmnt = Column(Float)
+    lst_pmnt = Column(Float)
+    pmnts_sum = Column(Float)
+    pmnts_nmbr = Column(Integer)
+    pmnts_sum_per_qrtr = Column(Float)
+    pmnts_sum_per_year = Column(Float)
+    pmnts_nmbr_per_qrtr = Column(Integer)
+    pmnts_nmbr_per_year = Column(Integer)
+    incm_sum = Column(Float)
+    incm_per_qrtr = Column(Float)
+    incm_per_year = Column(Float)
+    mgd_accum_period = Column(Float)
+    mgd_payment_period = Column(Float)
+    phone_number = Column(Integer)
+    email = Column(VARCHAR)
+    lk = Column(Integer)
+    assignee_npo = Column(Integer)
+    assignee_ops = Column(Integer)
+    postal_code = Column(VARCHAR)
+    region = Column(VARCHAR)
+    citizen = Column(Integer)
+    fact_addrss = Column(Integer)
+    appl_mrkr = Column(Integer)
+    evry_qrtr_pmnt = Column(Float)
+    churn = Column(Integer)

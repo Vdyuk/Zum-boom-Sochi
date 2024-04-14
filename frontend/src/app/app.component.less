@@ -1,0 +1,106 @@
+.list {
+  width: 300px;
+  box-shadow: 1px 4px 5px 0 rgba(80, 80, 80, 0.4);
+  background-color: white;
+  height: 100%; /* Устанавливаем высоту списка равную высоте контейнера */
+}
+
+.section-all {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.container {
+  display: flex;
+  height: 100vh; /* Устанавливаем высоту контейнера в 100% высоты экрана */
+}
+
+.mat-list-item {
+  overflow: visible; /* Разрешить содержимому перекрывать границы элемента */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  justify-content: flex-start;
+}
+
+.text {
+  color: rgba(0, 0, 0, 0.9) !important;
+  padding-bottom: 10px;
+}
+
+.text:hover {
+  color: #2d9bff !important;
+  opacity: 0.8;
+}
+
+.text.active {
+  color: #2d9bff !important; /* Цвет для активного элемента */
+}
+
+.list-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.icon {
+  border: 1px solid #f7f8f8;
+  width: 250px;
+  border-radius: 50%;
+}
+
+.move {
+  background-color: #2d9bff;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  height: 60px;
+  width: 60px;
+  font-size: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 0.15s;
+  cursor: pointer;
+  box-shadow: 2px 5px 8px 0 rgba(80, 80, 80, 0.4);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f8f8;
+  color: #444;
+  text-align: center;
+  padding: 10px 0;
+
+  padding-right: 600px;
+}
+
+section.section {
+  justify-content: space-between;
+  min-width: 1170px;
+}
+
+.col-md-4 {
+    margin-top: 15px;
+}

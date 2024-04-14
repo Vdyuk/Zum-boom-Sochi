@@ -1,0 +1,32 @@
+<div class="container">
+  <mat-list role="list" class="list">
+    <div class="list-icon">
+      <img src="../assets/img/npo.png" alt="" class="icon" />
+    </div>
+
+    <ng-container *ngFor="let link of list">
+      <mat-list-item role="listitem">
+        <div class="list-item" >
+
+          <a matListItemTitle [class.active]="link.isActive" [routerLink]="link.url" class="text">
+             {{ link.name }}
+          </a>
+        </div>
+
+      </mat-list-item>
+    </ng-container>
+
+ 
+  </mat-list>
+  <ng-container>
+    <div class="phone">
+      <section class="section section-all">
+        <router-outlet></router-outlet>
+        <nav>
+          <div class="footer">© 2024 Зумеры и Бумеры. All rights reserved.</div>
+        </nav>
+      </section>
+
+    </div>
+  </ng-container>
+</div>
